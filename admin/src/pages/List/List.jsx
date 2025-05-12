@@ -7,8 +7,22 @@ const List = ({url}) => {
   // const url = "http://localhost:4000"
   const [list,setList] = useState([]);
 
-  //to fetch data
-  const fetchList = async () => {
+     const fetchList = async () => {
+          const response = await axios.get(url+"/api/food/list");
+          setList(response.data.data);
+          if(response.data.success){
+            // if data is fetched successfully then set the data to list
+            setList(response.data.data);
+          }
+          else{
+            toast.error("Error");
+      
+          }
+      }
+
+      /* 
+       //to fetch data
+        const fetchList = async () => {
     const response = await axios.get(`${url}/api/food/list`);
     // console.log(response.data)
     if(response.data.success){
@@ -19,7 +33,9 @@ const List = ({url}) => {
       toast.error("Error");
 
     }
-  }
+  }*/
+ 
+
   // to remove food item
 
   const removeFood = async (foodId) => {
