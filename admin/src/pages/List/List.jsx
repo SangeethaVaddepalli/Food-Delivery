@@ -10,7 +10,7 @@ const List = ({url}) => {
   //to fetch data
   const fetchList = async () => {
     const response = await axios.get(`${url}/api/food/list`);
-    console.log8(response.datao)
+    // console.log(response.data)
     if(response.data.success){
       // if data is fetched successfully then set the data to list
       setList(response.data.data);

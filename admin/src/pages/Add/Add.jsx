@@ -51,10 +51,10 @@ const Add = ({url}) => {
         
     }
 
-    useEffect(()=>{
-        console.log(data);
+    // useEffect(()=>{
+    //     console.log(data);
         
-    },[data])
+    // },[data])
   return (
     <div className='add'>
         <form className="flex-col" onSubmit={onSubmitHandler}>
