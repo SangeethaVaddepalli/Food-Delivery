@@ -14,7 +14,7 @@ const StoreContextProvider =(props) =>{
     const [cartItems,setCartItems] = useState({});
 
     // give url
-    const url = "https://food-del-backend-yqqz.onrender.com"
+    const url = "https://food-delivery-backend-dbo5.onrender.com"
     const [token,setToken] = useState("");
     // tostore the food list in the state direct from db
     const [food_list,setFoodList] = useState([]);
